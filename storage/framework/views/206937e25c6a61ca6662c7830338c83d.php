@@ -2,10 +2,10 @@
 <?php $__env->startSection('content'); ?>
 
 <h2 class="section-title">
-    <i class="bi bi-briefcase" style="color:var(--rojo)"></i> Zapatos Formales / Elegantes
+    <i class="bi bi-lightning-charge" style="color:var(--rojo)"></i> Deportivos (Performance)
 </h2>
 <p class="text-muted mb-4">
-Descubre nuestra colección premium de zapatos formales: elegancia, comodidad y estilo para oficina y eventos.
+Rendimiento, velocidad y comodidad. Descubre los mejores tenis deportivos para entrenamiento, running y alto desempeño.
 </p>
 
 <div class="row g-4">
@@ -13,14 +13,71 @@ Descubre nuestra colección premium de zapatos formales: elegancia, comodidad y 
     
     <div class="col-md-4">
         <div class="card card-gs">
-            <img src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=500&q=80"
+            <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80"
                  class="card-img-top" style="height:200px;object-fit:cover">
             <div class="card-body">
-                <span class="badge badge-negro mb-2">Negro</span>
-                <h5 class="fw-bold">Oxford Clásico Premium</h5>
-                <p class="small text-muted">Cuero genuino elegante. Ideal para oficina y eventos formales.</p>
+                <span class="badge badge-rojo mb-2">Running</span>
+                <h5 class="fw-bold">Air Zoom X Pro</h5>
+                <p class="small text-muted">Alto rendimiento con máxima amortiguación y ligereza.</p>
                 <div class="d-flex justify-content-between align-items-center">
-                    <strong style="color:var(--negro);font-size:1.2rem">$280.000</strong>
+                    <strong style="color:var(--rojo);font-size:1.2rem">$450.000</strong>
+                    <button class="btn btn-golden btn-sm">
+                        <i class="bi bi-bag-plus"></i> Pedir
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="col-md-4">
+        <div class="card card-gs">
+            <img src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=500&q=80"
+                 class="card-img-top" style="height:200px;object-fit:cover">
+            <div class="card-body">
+                <span class="badge badge-rojo mb-2">Training</span>
+                <h5 class="fw-bold">Ultraboost 23</h5>
+                <p class="small text-muted">Comodidad total y energía en cada paso.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <strong style="color:var(--rojo);font-size:1.2rem">$500.000</strong>
+                    <button class="btn btn-golden btn-sm">
+                        <i class="bi bi-bag-plus"></i> Pedir
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="col-md-4">
+        <div class="card card-gs">
+            <img src="https://images.unsplash.com/photo-1556906781-9a412961a28d?w=500&q=80"
+                 class="card-img-top" style="height:200px;object-fit:cover">
+            <div class="card-body">
+                <span class="badge badge-rojo mb-2">Running</span>
+                <h5 class="fw-bold">Gel Nimbus Pro</h5>
+                <p class="small text-muted">Amortiguación avanzada para largas distancias.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <strong style="color:var(--rojo);font-size:1.2rem">$420.000</strong>
+                    <button class="btn btn-golden btn-sm">
+                        <i class="bi bi-bag-plus"></i> Pedir
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    <div class="col-md-4">
+        <div class="card card-gs">
+            <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=500&q=80"
+                 class="card-img-top" style="height:200px;object-fit:cover">
+            <div class="card-body">
+                <span class="badge badge-negro mb-2">Gym</span>
+                <h5 class="fw-bold">RS-X Performance</h5>
+                <p class="small text-muted">Diseño resistente para entrenamiento intenso.</p>
+                <div class="d-flex justify-content-between align-items-center">
+                    <strong style="color:var(--negro);font-size:1.2rem">$390.000</strong>
                     <button class="btn btn-dark btn-sm">
                         <i class="bi bi-bag-plus"></i> Pedir
                     </button>
@@ -32,72 +89,15 @@ Descubre nuestra colección premium de zapatos formales: elegancia, comodidad y 
     
     <div class="col-md-4">
         <div class="card card-gs">
-            <img src="https://images.unsplash.com/photo-1614252235486-c4e7f7c8a8b2?w=500&q=80"
+            <img src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=500&q=80"
                  class="card-img-top" style="height:200px;object-fit:cover">
             <div class="card-body">
-                <span class="badge badge-cafe mb-2">Café</span>
-                <h5 class="fw-bold">Derby Ejecutivo</h5>
-                <p class="small text-muted">Diseño sofisticado con acabado premium. Perfecto para oficina.</p>
+                <span class="badge badge-blanco mb-2">Running</span>
+                <h5 class="fw-bold">Wave Rider X</h5>
+                <p class="small text-muted">Estabilidad y confort para correr sin límites.</p>
                 <div class="d-flex justify-content-between align-items-center">
-                    <strong style="color:#6b3e26;font-size:1.2rem">$260.000</strong>
-                    <button class="btn btn-golden btn-sm">
-                        <i class="bi bi-bag-plus"></i> Pedir
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    
-    <div class="col-md-4">
-        <div class="card card-gs">
-            <img src="https://images.unsplash.com/photo-1618354691269-6e66c68c92d5?w=500&q=80"
-                 class="card-img-top" style="height:200px;object-fit:cover">
-            <div class="card-body">
-                <span class="badge badge-cafe mb-2">Marrón</span>
-                <h5 class="fw-bold">Loafer Elegante</h5>
-                <p class="small text-muted">Estilo sin cordones cómodo y sofisticado.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                    <strong style="color:#6b3e26;font-size:1.2rem">$300.000</strong>
-                    <button class="btn btn-golden btn-sm">
-                        <i class="bi bi-bag-plus"></i> Pedir
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    
-    <div class="col-md-4">
-        <div class="card card-gs">
-            <img src="https://images.unsplash.com/photo-1614252235402-22c34d6d87d0?w=500&q=80"
-                 class="card-img-top" style="height:200px;object-fit:cover">
-            <div class="card-body">
-                <span class="badge badge-negro mb-2">Negro</span>
-                <h5 class="fw-bold">Oxford Italiano</h5>
-                <p class="small text-muted">Diseño europeo con acabado brillante.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                    <strong style="color:var(--negro);font-size:1.2rem">$310.000</strong>
-                    <button class="btn btn-dark btn-sm">
-                        <i class="bi bi-bag-plus"></i> Pedir
-                    </button>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    
-    <div class="col-md-4">
-        <div class="card card-gs">
-            <img src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=500&q=80"
-                 class="card-img-top" style="height:200px;object-fit:cover">
-            <div class="card-body">
-                <span class="badge badge-cafe mb-2">Café oscuro</span>
-                <h5 class="fw-bold">Mocasín Ejecutivo</h5>
-                <p class="small text-muted">Comodidad premium con estilo formal.</p>
-                <div class="d-flex justify-content-between align-items-center">
-                    <strong style="color:#6b3e26;font-size:1.2rem">$270.000</strong>
-                    <button class="btn btn-golden btn-sm">
+                    <strong style="color:var(--carbon);font-size:1.2rem">$410.000</strong>
+                    <button class="btn btn-secondary btn-sm">
                         <i class="bi bi-bag-plus"></i> Pedir
                     </button>
                 </div>
@@ -109,16 +109,16 @@ Descubre nuestra colección premium de zapatos formales: elegancia, comodidad y 
     <div class="col-md-4">
         <div class="card card-gs" style="border:2px solid var(--rojo)">
             <div class="position-absolute top-0 end-0 m-2">
-                <span class="badge" style="background:var(--rojo)">Premium</span>
+                <span class="badge" style="background:var(--rojo)">¡TOP!</span>
             </div>
-            <img src="https://images.unsplash.com/photo-1614252235486-c4e7f7c8a8b2?w=500&q=80"
+            <img src="https://images.unsplash.com/photo-1539185441755-769473a23570?w=500&q=80"
                  class="card-img-top" style="height:200px;object-fit:cover">
             <div class="card-body">
-                <span class="badge badge-negro mb-2">Negro</span>
-                <h5 class="fw-bold">Elite Formal X</h5>
-                <p class="small text-muted">Alta gama para ocasiones especiales.</p>
+                <span class="badge badge-rojo mb-2">Performance</span>
+                <h5 class="fw-bold">Velocity Nitro X</h5>
+                <p class="small text-muted">Tecnología avanzada para máximo desempeño.</p>
                 <div class="d-flex justify-content-between align-items-center">
-                    <strong style="color:var(--rojo);font-size:1.2rem">$350.000</strong>
+                    <strong style="color:var(--rojo);font-size:1.2rem">$480.000</strong>
                     <button class="btn btn-golden btn-sm">
                         <i class="bi bi-bag-plus"></i> Pedir
                     </button>
@@ -129,4 +129,4 @@ Descubre nuestra colección premium de zapatos formales: elegancia, comodidad y 
 
 </div>
 <?php $__env->stopSection(); ?>
-<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH D:\segundoTaller\resources\views/formales.blade.php ENDPATH**/ ?>
+<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH D:\segundoTaller\resources\views/deportivos.blade.php ENDPATH**/ ?>

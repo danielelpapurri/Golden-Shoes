@@ -10,7 +10,7 @@
         </h1>
         <p class="text-muted mb-4">Zapatos que combinan diseño y comodidad para quienes marcan la diferencia.</p>
         <div class="d-flex gap-3">
-            <a href="<?php echo e(route('formales')); ?>" class="btn btn-danger px-4" style="background-color:var(--rojo); border:none;">Ver Colección</a>
+            <a href="<?php echo e(route('deportivos')); ?>" class="btn btn-danger px-4" style="background-color:var(--rojo); border:none;">Ver Colección</a>
             <a href="<?php echo e(route('zapatos')); ?>" class="btn btn-outline-dark px-4">Agregar Zapato</a>
         </div>
     </div>
@@ -18,7 +18,8 @@
     <div class="col-md-5 text-center">
         <img src="<?php echo e(asset('fotos/muchaho_intro.png')); ?>" 
              class="img-fluid" 
-             style="max-height: 350px; width: auto; object-fit: contain;">
+             style="max-height: 350px; width: auto; object-fit: contain;" 
+             alt="Muchacho Intro Gold Shoes">
     </div>
 </div>
 <h2 class="section-title">Nuestras Categorías</h2>

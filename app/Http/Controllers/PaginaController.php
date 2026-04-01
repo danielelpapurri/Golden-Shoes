@@ -13,9 +13,19 @@ class PaginaController extends Controller
         return view('inicio');
     }
 
-    public function menu()
+    public function formales()
     {
-        return view('menu');
+        return view('formales');
+    }
+
+    public function deportivos()
+    {
+        return view('deportivos');
+    }
+
+    public function accis()
+    {
+        return view('accis');
     }
 
     public function nosotros()
@@ -71,6 +81,6 @@ class PaginaController extends Controller
             'nombre', 'marca', 'talla', 'color', 'precio', 'stock', 'descripcion'
         ]));
 
-        return back()->with('success', '¡Zapato registrado exitosamente!');
+        return back()->with('success', '¡Zapato registrado exitosamente :)!');
     }
 }

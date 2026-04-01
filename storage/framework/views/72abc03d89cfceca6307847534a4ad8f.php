@@ -60,9 +60,6 @@
         footer a { color: #aaa; text-decoration: none; }
         footer a:hover { color: var(--rojo); }
 
-        /* CARDS */
-        .card { border: 1px solid #e0e0e0; border-radius: 8px; }
-
         /* SECTION TITLE */
         .section-title {
             font-weight: 800;
@@ -71,22 +68,6 @@
             padding-left: 0.7rem;
             margin-bottom: 1.2rem;
         }
-
-        /* FORM */
-        .form-control:focus, .form-select:focus {
-            border-color: var(--rojo);
-            box-shadow: 0 0 0 0.15rem rgba(201,36,36,0.2);
-        }
-        .form-label { font-weight: 600; color: var(--carbon); }
-
-        /* TABLE */
-        .table-gs thead { background-color: var(--rojo); color: #fff; }
-        .table-gs tbody tr:hover { background-color: #fde8e8; }
-
-        /* BADGES */
-        .badge-rojo   { background-color: var(--rojo); color: #fff; }
-        .badge-negro  { background-color: var(--negro); color: #fff; }
-        .badge-blanco { background-color: #e0e0e0; color: var(--negro); }
     </style>
 </head>
 <body>
@@ -105,10 +86,13 @@
                     <a class="nav-link <?php echo e(request()->routeIs('inicio') ? 'active' : ''); ?>" href="<?php echo e(route('inicio')); ?>">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php echo e(request()->routeIs('menu') ? 'active' : ''); ?>" href="<?php echo e(route('menu')); ?>">Premium</a>
+                    <a class="nav-link <?php echo e(request()->routeIs('formales') ? 'active' : ''); ?>" href="<?php echo e(route('formales')); ?>">Premium</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link <?php echo e(request()->routeIs('nosotros') ? 'active' : ''); ?>" href="<?php echo e(route('nosotros')); ?>">Nosotros</a>
+                    <a class="nav-link <?php echo e(request()->routeIs('deportivos') ? 'active' : ''); ?>" href="<?php echo e(route('deportivos')); ?>">Deportivos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link <?php echo e(request()->routeIs('accesorios') ? 'active' : ''); ?>" href="<?php echo e(route('accesorios')); ?>">Urbanos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link <?php echo e(request()->routeIs('contactos') ? 'active' : ''); ?>" href="<?php echo e(route('contactos')); ?>">Contacto</a>
@@ -138,26 +122,24 @@
                 <h6 class="text-white fw-bold mb-2">Navegación</h6>
                 <ul class="list-unstyled small">
                     <li><a href="<?php echo e(route('inicio')); ?>">Inicio</a></li>
-                    <li><a href="<?php echo e(route('menu')); ?>">Colección Formales / Casual (Premium)</a></li>
-                    <li><a href="<?php echo e(route('menu')); ?>">Colección Deportivos (Performance)</a></li>
-                    <li><a href="<?php echo e(route('menu')); ?>">Colección Urbanos (Lifestyle)</a></li>
+                    <li><a href="<?php echo e(route('formales')); ?>">Colección Formales / Casual (Premium)</a></li>
+                    <li><a href="<?php echo e(route('deportivos')); ?>">Colección Deportivos (Performance)</a></li>
+                    <li><a href="<?php echo e(route('accesorios')); ?>">Colección Urbanos (Lifestyle)</a></li>
                     <li><a href="<?php echo e(route('nosotros')); ?>">Nosotros</a></li>
                     <li><a href="<?php echo e(route('contactos')); ?>">Contacto</a></li>
-                    <li><a href="<?php echo e(route('zapatos')); ?>">Módulo Zapatos</a></li>
                 </ul>
             </div>
             <div class="col-md-4">
                 <h6 class="text-white fw-bold mb-2">Contacto</h6>
                 <p class="small mb-1"><i class="bi bi-whatsapp"></i> +57 3178232220</p>
-                <p class="small mb-1"><i class="bi bi-envelope"></i>adminzapatodanihel@goldenshoes.com</p>
+                <p class="small mb-1"><i class="bi bi-envelope"></i> adminzapatodanihel@goldenshoes.com</p>
                 <p class="small"><i class="bi bi-instagram"></i> @GoldenShoesCol</p>
             </div>
         </div>
         <hr class="border-secondary mt-3">
-        <p class="text-center small mb-0">© 2026 Golden Shoes</p>
+        <p class="text-center small mb-0">© 2026 Golden Shoes - Pasto, Colombia</p>
     </div>
 </footer>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
-</html>
-<?php /**PATH D:\segundoTaller\resources\views/layouts/app.blade.php ENDPATH**/ ?>
+</html><?php /**PATH D:\segundoTaller\resources\views/layouts/app.blade.php ENDPATH**/ ?>

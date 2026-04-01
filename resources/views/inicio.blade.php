@@ -11,7 +11,7 @@
         </h1>
         <p class="text-muted mb-4">Zapatos que combinan diseño y comodidad para quienes marcan la diferencia.</p>
         <div class="d-flex gap-3">
-            <a href="{{ route('formales') }}" class="btn btn-danger px-4" style="background-color:var(--rojo); border:none;">Ver Colección</a>
+            <a href="{{ route('deportivos') }}" class="btn btn-danger px-4" style="background-color:var(--rojo); border:none;">Ver Colección</a>
             <a href="{{ route('zapatos') }}" class="btn btn-outline-dark px-4">Agregar Zapato</a>
         </div>
     </div>
