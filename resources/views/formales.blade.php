@@ -1,5 +1,6 @@
-<?php $__env->startSection('title', 'Colección Tienda'); ?>
-<?php $__env->startSection('content'); ?>
+@extends('layouts.app')
+@section('title', 'Colección Tienda')
+@section('content')
 
 <h2 class="section-title">
     <i class="bi bi-briefcase" style="color:var(--rojo)"></i> Zapatos Formales / Elegantes
@@ -10,7 +11,7 @@ Descubre nuestra colección premium de zapatos formales: elegancia, comodidad y 
 
 <div class="row g-4">
 
-    
+    {{-- Producto 1 --}}
     <div class="col-md-4">
         <div class="card card-gs">
             <img src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=500&q=80"
@@ -29,7 +30,7 @@ Descubre nuestra colección premium de zapatos formales: elegancia, comodidad y 
         </div>
     </div>
 
-    
+    {{-- Producto 2 --}}
     <div class="col-md-4">
         <div class="card card-gs">
             <img src="https://images.unsplash.com/photo-1614252235486-c4e7f7c8a8b2?w=500&q=80"
@@ -48,7 +49,7 @@ Descubre nuestra colección premium de zapatos formales: elegancia, comodidad y 
         </div>
     </div>
 
-    
+    {{-- Producto 3 --}}
     <div class="col-md-4">
         <div class="card card-gs">
             <img src="https://images.unsplash.com/photo-1618354691269-6e66c68c92d5?w=500&q=80"
@@ -67,7 +68,7 @@ Descubre nuestra colección premium de zapatos formales: elegancia, comodidad y 
         </div>
     </div>
 
-    
+    {{-- Producto 4 --}}
     <div class="col-md-4">
         <div class="card card-gs">
             <img src="https://images.unsplash.com/photo-1614252235402-22c34d6d87d0?w=500&q=80"
@@ -86,7 +87,7 @@ Descubre nuestra colección premium de zapatos formales: elegancia, comodidad y 
         </div>
     </div>
 
-    
+    {{-- Producto 5 --}}
     <div class="col-md-4">
         <div class="card card-gs">
             <img src="https://images.unsplash.com/photo-1614252235316-8c857d38b5f4?w=500&q=80"
@@ -105,7 +106,7 @@ Descubre nuestra colección premium de zapatos formales: elegancia, comodidad y 
         </div>
     </div>
 
-    
+    {{-- Producto 6 --}}
     <div class="col-md-4">
         <div class="card card-gs" style="border:2px solid var(--rojo)">
             <div class="position-absolute top-0 end-0 m-2">
@@ -128,5 +129,4 @@ Descubre nuestra colección premium de zapatos formales: elegancia, comodidad y 
     </div>
 
 </div>
-<?php $__env->stopSection(); ?>
-<?php echo $__env->make('layouts.app', array_diff_key(get_defined_vars(), ['__data' => 1, '__path' => 1]))->render(); ?><?php /**PATH D:\segundoTaller\resources\views/menu.blade.php ENDPATH**/ ?>
+@endsection

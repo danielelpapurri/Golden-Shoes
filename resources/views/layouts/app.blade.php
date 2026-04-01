@@ -105,7 +105,7 @@
                     <a class="nav-link {{ request()->routeIs('inicio') ? 'active' : '' }}" href="{{ route('inicio') }}">Inicio</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('menu') ? 'active' : '' }}" href="{{ route('menu') }}">Rojos</a>
+                    <a class="nav-link {{ request()->routeIs('formales') ? 'active' : '' }}" href="{{ route('formales') }}">Premium</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->routeIs('nosotros') ? 'active' : '' }}" href="{{ route('nosotros') }}">Nosotros</a>
@@ -119,10 +119,6 @@
                     </a>
                 </li>
             </ul>
-            <div class="d-flex gap-2 align-items-center">
-                <a href="#" class="nav-link text-dark"><i class="bi bi-heart"></i></a>
-                <a href="#" class="nav-link text-dark"><i class="bi bi-bag"></i></a>
-            </div>
         </div>
     </div>
 </nav>
@@ -142,7 +138,9 @@
                 <h6 class="text-white fw-bold mb-2">Navegación</h6>
                 <ul class="list-unstyled small">
                     <li><a href="{{ route('inicio') }}">Inicio</a></li>
-                    <li><a href="{{ route('menu') }}">Colección Rojos</a></li>
+                    <li><a href="{{ route('menu') }}">Colección Formales / Casual (Premium)</a></li>
+                    <li><a href="{{ route('menu') }}">Colección Deportivos (Performance)</a></li>
+                    <li><a href="{{ route('menu') }}">Colección Urbanos (Lifestyle)</a></li>
                     <li><a href="{{ route('nosotros') }}">Nosotros</a></li>
                     <li><a href="{{ route('contactos') }}">Contacto</a></li>
                     <li><a href="{{ route('zapatos') }}">Módulo Zapatos</a></li>
@@ -150,16 +148,15 @@
             </div>
             <div class="col-md-4">
                 <h6 class="text-white fw-bold mb-2">Contacto</h6>
-                <p class="small mb-1"><i class="bi bi-whatsapp"></i> +57 300 000 0000</p>
-                <p class="small mb-1"><i class="bi bi-envelope"></i> info@goldenshoes.com</p>
+                <p class="small mb-1"><i class="bi bi-whatsapp"></i> +57 3178232220</p>
+                <p class="small mb-1"><i class="bi bi-envelope"></i>adminzapatodanihel@goldenshoes.com</p>
                 <p class="small"><i class="bi bi-instagram"></i> @GoldenShoesCol</p>
             </div>
         </div>
         <hr class="border-secondary mt-3">
-        <p class="text-center small mb-0">© 2026 Golden Shoes · Segundo Taller · Programación Avanzada</p>
+        <p class="text-center small mb-0">© 2026 Golden Shoes</p>
     </div>
 </footer>
-
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

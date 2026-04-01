@@ -1,9 +1,13 @@
 @extends('layouts.app')
-@section('title', 'Colección Rojos')
+@section('title', 'Colección Tienda')
 @section('content')
 
-<h2 class="section-title"><i class="bi bi-fire" style="color:var(--rojo)"></i> Colección Rojos</h2>
-<p class="text-muted mb-4">Los más vendidos de la temporada. Diseño audaz, actitud única.</p>
+<h2 class="section-title">
+    <i class="bi bi-lightning-charge" style="color:var(--rojo)"></i> Deportivos (Performance)
+</h2>
+<p class="text-muted mb-4">
+Rendimiento, velocidad y comodidad. Descubre los mejores tenis deportivos para entrenamiento, running y alto desempeño.
+</p>
 
 <div class="row g-4">
 
@@ -11,13 +15,13 @@
     <div class="col-md-4">
         <div class="card card-gs">
             <img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=500&q=80"
-                 class="card-img-top" style="height:200px;object-fit:cover" alt="Air Force Rojo">
+                 class="card-img-top" style="height:200px;object-fit:cover">
             <div class="card-body">
-                <span class="badge badge-rojo mb-2">Rojos</span>
-                <h5 class="fw-bold">Air Force Rojo Pro</h5>
-                <p class="small text-muted">Zapatilla deportiva con suela reforzada. Talla 38–44.</p>
+                <span class="badge badge-rojo mb-2">Running</span>
+                <h5 class="fw-bold">Air Zoom X Pro</h5>
+                <p class="small text-muted">Alto rendimiento con máxima amortiguación y ligereza.</p>
                 <div class="d-flex justify-content-between align-items-center">
-                    <strong style="color:var(--rojo);font-size:1.2rem">$189.900</strong>
+                    <strong style="color:var(--rojo);font-size:1.2rem">$450.000</strong>
                     <button class="btn btn-golden btn-sm">
                         <i class="bi bi-bag-plus"></i> Pedir
                     </button>
@@ -30,13 +34,13 @@
     <div class="col-md-4">
         <div class="card card-gs">
             <img src="https://images.unsplash.com/photo-1600185365926-3a2ce3cdb9eb?w=500&q=80"
-                 class="card-img-top" style="height:200px;object-fit:cover" alt="Speed Runner">
+                 class="card-img-top" style="height:200px;object-fit:cover">
             <div class="card-body">
-                <span class="badge badge-rojo mb-2">Rojos</span>
-                <h5 class="fw-bold">Speed Runner 2026</h5>
-                <p class="small text-muted">Running de alto rendimiento con amortiguación máxima.</p>
+                <span class="badge badge-rojo mb-2">Training</span>
+                <h5 class="fw-bold">Ultraboost 23</h5>
+                <p class="small text-muted">Comodidad total y energía en cada paso.</p>
                 <div class="d-flex justify-content-between align-items-center">
-                    <strong style="color:var(--rojo);font-size:1.2rem">$215.000</strong>
+                    <strong style="color:var(--rojo);font-size:1.2rem">$500.000</strong>
                     <button class="btn btn-golden btn-sm">
                         <i class="bi bi-bag-plus"></i> Pedir
                     </button>
@@ -49,13 +53,13 @@
     <div class="col-md-4">
         <div class="card card-gs">
             <img src="https://images.unsplash.com/photo-1556906781-9a412961a28d?w=500&q=80"
-                 class="card-img-top" style="height:200px;object-fit:cover" alt="Urban Rojo">
+                 class="card-img-top" style="height:200px;object-fit:cover">
             <div class="card-body">
-                <span class="badge badge-rojo mb-2">Rojos</span>
-                <h5 class="fw-bold">Urban Rojo Classic</h5>
-                <p class="small text-muted">Estilo urbano con puntera reforzada y suela antideslizante.</p>
+                <span class="badge badge-rojo mb-2">Running</span>
+                <h5 class="fw-bold">Gel Nimbus Pro</h5>
+                <p class="small text-muted">Amortiguación avanzada para largas distancias.</p>
                 <div class="d-flex justify-content-between align-items-center">
-                    <strong style="color:var(--rojo);font-size:1.2rem">$175.500</strong>
+                    <strong style="color:var(--rojo);font-size:1.2rem">$420.000</strong>
                     <button class="btn btn-golden btn-sm">
                         <i class="bi bi-bag-plus"></i> Pedir
                     </button>
@@ -64,17 +68,17 @@
         </div>
     </div>
 
-    {{-- Producto 4 NEGRO (módulo adicional) --}}
+    {{-- Producto 4 --}}
     <div class="col-md-4">
         <div class="card card-gs">
             <img src="https://images.unsplash.com/photo-1491553895911-0055eca6402d?w=500&q=80"
-                 class="card-img-top" style="height:200px;object-fit:cover" alt="Dark Edition">
+                 class="card-img-top" style="height:200px;object-fit:cover">
             <div class="card-body">
-                <span class="badge badge-negro mb-2">Negros</span>
-                <h5 class="fw-bold">Dark Edition Elite</h5>
-                <p class="small text-muted">Cuero genuino negro mate. Perfecto para cada ocasión.</p>
+                <span class="badge badge-negro mb-2">Gym</span>
+                <h5 class="fw-bold">RS-X Performance</h5>
+                <p class="small text-muted">Diseño resistente para entrenamiento intenso.</p>
                 <div class="d-flex justify-content-between align-items-center">
-                    <strong style="color:var(--negro);font-size:1.2rem">$248.000</strong>
+                    <strong style="color:var(--negro);font-size:1.2rem">$390.000</strong>
                     <button class="btn btn-dark btn-sm">
                         <i class="bi bi-bag-plus"></i> Pedir
                     </button>
@@ -83,17 +87,17 @@
         </div>
     </div>
 
-    {{-- Producto 5 BLANCO --}}
+    {{-- Producto 5 --}}
     <div class="col-md-4">
         <div class="card card-gs">
             <img src="https://images.unsplash.com/photo-1600269452121-4f2416e55c28?w=500&q=80"
-                 class="card-img-top" style="height:200px;object-fit:cover" alt="White Pearl">
+                 class="card-img-top" style="height:200px;object-fit:cover">
             <div class="card-body">
-                <span class="badge badge-blanco mb-2">Blancos</span>
-                <h5 class="fw-bold">White Pearl Premium</h5>
-                <p class="small text-muted">Minimalismo y estilo en cuero blanco de alta gama.</p>
+                <span class="badge badge-blanco mb-2">Running</span>
+                <h5 class="fw-bold">Wave Rider X</h5>
+                <p class="small text-muted">Estabilidad y confort para correr sin límites.</p>
                 <div class="d-flex justify-content-between align-items-center">
-                    <strong style="color:var(--carbon);font-size:1.2rem">$198.000</strong>
+                    <strong style="color:var(--carbon);font-size:1.2rem">$410.000</strong>
                     <button class="btn btn-secondary btn-sm">
                         <i class="bi bi-bag-plus"></i> Pedir
                     </button>
@@ -102,20 +106,20 @@
         </div>
     </div>
 
-    {{-- Producto 6 ROJO (nuevo) --}}
+    {{-- Producto 6 NUEVO --}}
     <div class="col-md-4">
         <div class="card card-gs" style="border:2px solid var(--rojo)">
             <div class="position-absolute top-0 end-0 m-2">
-                <span class="badge" style="background:var(--rojo)">¡NUEVO!</span>
+                <span class="badge" style="background:var(--rojo)">¡TOP!</span>
             </div>
             <img src="https://images.unsplash.com/photo-1539185441755-769473a23570?w=500&q=80"
-                 class="card-img-top" style="height:200px;object-fit:cover" alt="Flame X">
+                 class="card-img-top" style="height:200px;object-fit:cover">
             <div class="card-body">
-                <span class="badge badge-rojo mb-2">Rojos</span>
-                <h5 class="fw-bold">Flame X — Edición Especial</h5>
-                <p class="small text-muted">Lo más nuevo de la colección. Diseño exclusivo 2026.</p>
+                <span class="badge badge-rojo mb-2">Performance</span>
+                <h5 class="fw-bold">Velocity Nitro X</h5>
+                <p class="small text-muted">Tecnología avanzada para máximo desempeño.</p>
                 <div class="d-flex justify-content-between align-items-center">
-                    <strong style="color:var(--rojo);font-size:1.2rem">$265.000</strong>
+                    <strong style="color:var(--rojo);font-size:1.2rem">$480.000</strong>
                     <button class="btn btn-golden btn-sm">
                         <i class="bi bi-bag-plus"></i> Pedir
                     </button>

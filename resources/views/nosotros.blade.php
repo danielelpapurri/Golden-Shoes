@@ -7,23 +7,25 @@
     <div class="col-md-5">
         <div class="card text-center p-4">
             <div class="fs-2 mb-2" style="color:var(--rojo)"><i class="bi bi-person-circle"></i></div>
-            <h5 class="fw-bold">Brayan Camilo Salazar Diaz</h5>
-            <p class="text-muted small mb-0">Desarrollador · Golden Shoes</p>
+            <img src="{{ asset('fotos/dani.png') }}"
+                 class="card-img" style="height:200px;object-fit:cover;">
+            <h5 class="fw-bold">Daniel Cabezas</h5>
+            <p class="text-muted small mb-0">Mr Kasantari · Golden Shoes</p>
         </div>
     </div>
     <div class="col-md-5">
         <div class="card text-center p-4">
             <div class="fs-2 mb-2" style="color:var(--rojo)"><i class="bi bi-person-circle"></i></div>
-            <h5 class="fw-bold">Johan Sebastian Ramirez Torres</h5>
-            <p class="text-muted small mb-0">Desarrollador · Golden Shoes</p>
+            <img src="{{ asset('fotos/helder.png') }}"
+                 class="card-img" style="height:200px;object-fit:cover;">
+            <h5 class="fw-bold">Helder Gomez</h5>
+            <p class="text-muted small mb-0">Mr Largui · Golden Shoes</p>
         </div>
     </div>
 </div>
 
 <hr class="mb-5">
-
 <h2 class="section-title">Formulario PQRS</h2>
-<p class="text-muted mb-4">¿Tienes una petición, queja, reclamo o sugerencia? Cuéntanos.</p>
 
 <div class="row justify-content-center">
     <div class="col-lg-9">
@@ -49,15 +51,15 @@
                 <div class="row g-3">
                     <div class="col-md-6">
                         <label class="form-label">Nombres</label>
-                        <input type="text" name="nombre" class="form-control" value="{{ old('nombre') }}">
+                        <input type="text" name="nombre" class="form-control">
                     </div>
                     <div class="col-md-6">
                         <label class="form-label">Apellidos</label>
-                        <input type="text" name="apellido" class="form-control" value="{{ old('apellido') }}">
+                        <input type="text" name="apellido" class="form-control">
                     </div>
                     <div class="col-12">
                         <label class="form-label">Correo electrónico</label>
-                        <input type="email" name="correo" class="form-control" value="{{ old('correo') }}">
+                        <input type="email" name="correo" class="form-control">
                     </div>
                     <div class="col-12">
                         <label class="form-label">Tipo de solicitud</label>
@@ -72,10 +74,10 @@
                     </div>
                     <div class="col-12">
                         <label class="form-label">Mensaje</label>
-                        <textarea name="mensaje" class="form-control" rows="4">{{ old('mensaje') }}</textarea>
+                        <textarea name="mensaje" class="form-control" rows="4"></textarea>
                     </div>
                     <div class="col-12">
-                        <button type="submit" class="btn btn-golden w-100 py-2">
+                        <button type="submit" class="btn btn-golden w-100">
                             <i class="bi bi-send-fill"></i> Enviar mensaje
                         </button>
                     </div>
