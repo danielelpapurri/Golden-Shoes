@@ -108,7 +108,7 @@
                     <a class="nav-link {{ request()->routeIs('formales') ? 'active' : '' }}" href="{{ route('formales') }}">Premium</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('nosotros') ? 'active' : '' }}" href="{{ route('nosotros') }}">Nosotros</a>
+                    <a class="nav-link {{ request()->routeIs('deportivos') ? 'active' : '' }}" href="{{ route('deportivos') }}">Deportivos</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link {{ request()->routeIs('contactos') ? 'active' : '' }}" href="{{ route('contactos') }}">Contacto</a>

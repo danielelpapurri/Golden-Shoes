@@ -10,7 +10,7 @@
         </h1>
         <p class="text-muted mb-4">Zapatos que combinan diseño y comodidad para quienes marcan la diferencia.</p>
         <div class="d-flex gap-3">
-            <a href="<?php echo e(route('menu')); ?>" class="btn btn-danger px-4" style="background-color:var(--rojo); border:none;">Ver Colección</a>
+            <a href="<?php echo e(route('formales')); ?>" class="btn btn-danger px-4" style="background-color:var(--rojo); border:none;">Ver Colección</a>
             <a href="<?php echo e(route('zapatos')); ?>" class="btn btn-outline-dark px-4">Agregar Zapato</a>
         </div>
     </div>
@@ -18,8 +18,7 @@
     <div class="col-md-5 text-center">
         <img src="<?php echo e(asset('fotos/muchaho_intro.png')); ?>" 
              class="img-fluid" 
-             style="max-height: 350px; width: auto; object-fit: contain;" 
-             alt="Muchacho Intro Gold Shoes">
+             style="max-height: 350px; width: auto; object-fit: contain;">
     </div>
 </div>
 <h2 class="section-title">Nuestras Categorías</h2>
@@ -31,7 +30,7 @@
             <div class="card-img-overlay d-flex flex-column justify-content-end"
                  style="background:linear-gradient(to top,rgba(201,36,36,0.85),transparent)">
                 <h4 class="fw-black mb-1">Formales / Casual (Premium)</h4>
-                <a href="<?php echo e(route('menu')); ?>" class="btn btn-golden btn-sm w-50">Ver más</a>
+                <a href="<?php echo e(route('formales')); ?>" class="btn btn-golden btn-sm w-50">Ver más</a>
             </div>
         </div>
     </div>
@@ -42,7 +41,7 @@
             <div class="card-img-overlay d-flex flex-column justify-content-end"
                  style="background:linear-gradient(to top,rgba(23,23,23,0.9),transparent)">
                 <h4 class="fw-black mb-1">Deportivos (Performance) </h4>
-                <a href="<?php echo e(route('menu')); ?>" class="btn btn-secondary btn-sm w-50">Ver más</a>
+                <a href="<?php echo e(route('formales')); ?>" class="btn btn-secondary btn-sm w-50">Ver más</a>
             </div>
         </div>
     </div>
@@ -53,7 +52,7 @@
             <div class="card-img-overlay d-flex flex-column justify-content-end"
                  style="background:linear-gradient(to top,rgba(200,200,200,0.85),transparent)">
                 <h4 class="fw-black mb-1 text-dark">Urbanos (Lifestyle)</h4>
-                <a href="<?php echo e(route('menu')); ?>" class="btn btn-outline-dark btn-sm w-50">Ver más</a>
+                <a href="<?php echo e(route('formales')); ?>" class="btn btn-outline-dark btn-sm w-50">Ver más</a>
             </div>
         </div>
     </div>
