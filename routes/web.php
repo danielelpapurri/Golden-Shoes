@@ -1,4 +1,3 @@
-```php
 <?php
 
 use Illuminate\Support\Facades\Route;
@@ -8,7 +7,7 @@ use App\Http\Controllers\ProfileController;
 
 /*
 |--------------------------------------------------------------------------
-| Rutas públicas
+| RUTAS PÚBLICAS
 |--------------------------------------------------------------------------
 */
 
@@ -34,11 +33,31 @@ Route::get('/formales', function () {
     return view('formales');
 })->name('formales');
 
+Route::get('/accis', function () {
+    return view('accis');
+})->name('accis');
 
+/************************************************************/
+Route::get('/', [PaginaController::class, 'inicio'])->name('inicio');
+
+Route::get('/menu', [PaginaController::class, 'menu'])->name('menu');
+
+Route::get('/nosotros', [PaginaController::class, 'nosotros'])->name('nosotros');
+
+Route::get('/contacto', [PaginaController::class, 'contacto'])->name('contacto');
+
+Route::get('/formales', [PaginaController::class, 'formales'])->name('formales');
+
+Route::get('/deportivos', [PaginaController::class, 'deportivos'])->name('deportivos');
+
+Route::get('/accis', [PaginaController::class, 'accis'])->name('accis');
+
+Route::get('/zapatos', [PaginaController::class, 'zapatos'])->name('zapatos');
+/***********************************************************/ 
 
 /*
 |--------------------------------------------------------------------------
-| Dashboard protegido
+| DASHBOARD
 |--------------------------------------------------------------------------
 */
 
@@ -48,44 +67,21 @@ Route::get('/dashboard', function () {
 
 /*
 |--------------------------------------------------------------------------
-| Rutas protegidas
+| RUTAS PROTEGIDAS
 |--------------------------------------------------------------------------
 */
 
 Route::middleware('auth')->group(function () {
 
-    /*
-    |--------------------------------------------------------------------------
-    | Perfil usuario
-    |--------------------------------------------------------------------------
-    */
-
     Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-
     Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
-
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    /*
-    |--------------------------------------------------------------------------
-    | Mensajes PQRS
-    |--------------------------------------------------------------------------
-    */
-
     Route::get('/mensajes', [PqrsController::class, 'index'])->name('mensajes');
-
     Route::get('/mensajes/{id}/editar', [PqrsController::class, 'edit'])->name('mensajes.edit');
-
     Route::put('/mensajes/{id}', [PqrsController::class, 'update'])->name('mensajes.update');
-
     Route::delete('/mensajes/{id}', [PqrsController::class, 'destroy'])->name('mensajes.destroy');
 
 });
-
-/*
-|--------------------------------------------------------------------------
-| Auth Breeze
-|--------------------------------------------------------------------------
-*/
 
 require __DIR__.'/auth.php';

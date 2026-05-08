@@ -33,9 +33,9 @@ class PaginaController extends Controller
         return view('nosotros');
     }
 
-    public function contactos()
+    public function contacto()
     {
-        return view('contactos');
+        return view('contacto');
     }
 
     public function guardarPqrs(Request $request)
