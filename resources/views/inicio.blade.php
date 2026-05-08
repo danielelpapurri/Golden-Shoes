@@ -1,4 +1,4 @@
-@extends('layouts.app')
+
 @section('title', 'Inicio')
 @section('content')
 <div class="row align-items-center g-4 mb-5 p-4 bg-white rounded-3 shadow-sm">

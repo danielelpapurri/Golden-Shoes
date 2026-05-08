@@ -1,0 +1,21 @@
+```php id="v7o2mc"
+<x-app-layout>
+
+    <div class="py-12">
+
+        <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
+
+            <div class="bg-white overflow-hidden shadow-sm sm:rounded-lg p-6">
+
+                <h1 class="text-3xl font-bold">
+                    Editar Mensaje
+                </h1>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</x-app-layout>
+```

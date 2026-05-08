@@ -1,22 +1,91 @@
+```php
 <?php
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PaginaController;
+use App\Http\Controllers\PqrsController;
+use App\Http\Controllers\ProfileController;
 
-// Rutas principales
-Route::get('/',          [PaginaController::class, 'inicio'])->name('inicio');
-Route::get('/menu',      [PaginaController::class, 'menu'])->name('menu');
-Route::get('/nosotros',  [PaginaController::class, 'nosotros'])->name('nosotros');
-Route::get('/contactos', [PaginaController::class, 'contactos'])->name('contactos');
+/*
+|--------------------------------------------------------------------------
+| Rutas públicas
+|--------------------------------------------------------------------------
+*/
 
-// Categorías de Zapatos (Nuevas)
-Route::get('/deportivos', [PaginaController::class, 'deportivos'])->name('deportivos');
-Route::get('/formales',   [PaginaController::class, 'formales'])->name('formales');
-Route::get('/accesorios', [PaginaController::class, 'accesorios'])->name('accesorios');
+Route::get('/', [PaginaController::class, 'inicio'])->name('inicio');
 
-// PQRS
-Route::post('/pqrs', [PaginaController::class, 'guardarPqrs'])->name('pqrs.guardar');
+Route::get('/menu', [PaginaController::class, 'menu'])->name('menu');
 
-// Módulo Zapatos
-Route::get('/zapatos',   [PaginaController::class, 'zapatos'])->name('zapatos');
-Route::post('/zapatos',  [PaginaController::class, 'guardarZapato'])->name('zapatos.guardar');
+Route::get('/nosotros', [PaginaController::class, 'nosotros'])->name('nosotros');
+
+Route::get('/contacto', [PaginaController::class, 'contacto'])->name('contacto');
+
+Route::post('/pqrs', [PqrsController::class, 'store'])->name('pqrs.store');
+
+Route::get('/deportivos', function () {
+    return view('deportivos');
+})->name('deportivos');
+
+Route::get('/zapatos', function () {
+    return view('zapatos');
+})->name('zapatos');
+
+Route::get('/formales', function () {
+    return view('formales');
+})->name('formales');
+
+
+
+/*
+|--------------------------------------------------------------------------
+| Dashboard protegido
+|--------------------------------------------------------------------------
+*/
+
+Route::get('/dashboard', function () {
+    return view('dashboard');
+})->middleware(['auth'])->name('dashboard');
+
+/*
+|--------------------------------------------------------------------------
+| Rutas protegidas
+|--------------------------------------------------------------------------
+*/
+
+Route::middleware('auth')->group(function () {
+
+    /*
+    |--------------------------------------------------------------------------
+    | Perfil usuario
+    |--------------------------------------------------------------------------
+    */
+
+    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
+
+    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+
+    Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+
+    /*
+    |--------------------------------------------------------------------------
+    | Mensajes PQRS
+    |--------------------------------------------------------------------------
+    */
+
+    Route::get('/mensajes', [PqrsController::class, 'index'])->name('mensajes');
+
+    Route::get('/mensajes/{id}/editar', [PqrsController::class, 'edit'])->name('mensajes.edit');
+
+    Route::put('/mensajes/{id}', [PqrsController::class, 'update'])->name('mensajes.update');
+
+    Route::delete('/mensajes/{id}', [PqrsController::class, 'destroy'])->name('mensajes.destroy');
+
+});
+
+/*
+|--------------------------------------------------------------------------
+| Auth Breeze
+|--------------------------------------------------------------------------
+*/
+
+require __DIR__.'/auth.php';
