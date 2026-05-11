@@ -1,96 +1,133 @@
-@extends('layouts.app')
-@section('title', 'Nosotros')
-@section('content')
+<x-app-layout>
 
-<h2 class="section-title">Nuestro Equipo</h2>
-<div class="row g-4 justify-content-center mb-5">
-    <div class="col-md-5">
-        <div class="card text-center p-4">
-            <div class="fs-2 mb-2" style="color:var(--rojo)"><i class="bi bi-person-circle"></i></div>
-            <img src="{{ asset('fotos/dani.png') }}"
-                 class="card-img" style="height:200px;object-fit:cover;">
-            <h5 class="fw-bold">Daniel Cabezas</h5>
-            <p class="text-muted small mb-0">Mr Kasantari · Golden Shoes</p>
+    {{-- ════ ENCABEZADO ════ --}}
+    <section class="bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+            <p class="text-xs font-bold tracking-widest uppercase text-red-600 mb-2">La empresa</p>
+            <h1 class="text-4xl font-black text-gray-900 mb-2">Nuestro Equipo</h1>
+            <p class="text-gray-500 text-base">Las personas detrás de Golden Shoes.</p>
         </div>
-    </div>
-    <div class="col-md-5">
-        <div class="card text-center p-4">
-            <div class="fs-2 mb-2" style="color:var(--rojo)"><i class="bi bi-person-circle"></i></div>
-            <img src="{{ asset('fotos/helder.png') }}"
-                 class="card-img" style="height:200px;object-fit:cover;">
-            <h5 class="fw-bold">Helder Gomez</h5>
-            <p class="text-muted small mb-0">Mr Largui · Golden Shoes</p>
-        </div>
-    </div>
-</div>
+    </section>
 
-<hr class="mb-5">
-<h2 class="section-title">Formulario PQRS</h2>
+    <section class="bg-gray-50 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
 
-<div class="row justify-content-center">
-    <div class="col-lg-9">
-        <div class="card p-4">
+            {{-- ════ EQUIPO ════ --}}
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto mb-16">
 
-            @if(session('success'))
-                <div class="alert alert-success">
-                    <i class="bi bi-check-circle-fill"></i> {{ session('success') }}
+                {{-- Daniel --}}
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden text-center">
+                    <div class="bg-gray-50 overflow-hidden" style="height:220px">
+                        <img src="{{ asset('fotos/dani.png') }}"
+                             class="w-full h-full object-cover">
+                    </div>
+                    <div class="p-6">
+                        <span class="inline-block text-xs font-bold tracking-widest uppercase text-red-600 bg-red-50 border border-red-100 px-3 py-1 rounded-full mb-3">Fundador</span>
+                        <h5 class="text-lg font-black text-gray-900 mb-1">Daniel Cabezas</h5>
+                        <p class="text-sm text-gray-400">Mr Kasantari · Golden Shoes</p>
+                    </div>
                 </div>
-            @endif
-            @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul class="mb-0">
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
 
-            <form action="{{ route('pqrs.guardar') }}" method="POST">
-                @csrf
-                <div class="row g-3">
-                    <div class="col-md-6">
-                        <label class="form-label">Nombres</label>
-                        <input type="text" name="nombre" class="form-control">
+                {{-- Helder --}}
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden text-center">
+                    <div class="bg-gray-50 overflow-hidden" style="height:220px">
+                        <img src="{{ asset('fotos/helder.png') }}"
+                             class="w-full h-full object-cover">
                     </div>
-                    <div class="col-md-6">
-                        <label class="form-label">Apellidos</label>
-                        <input type="text" name="apellido" class="form-control">
+                    <div class="p-6">
+                        <span class="inline-block text-xs font-bold tracking-widest uppercase text-red-600 bg-red-50 border border-red-100 px-3 py-1 rounded-full mb-3">Co-fundador</span>
+                        <h5 class="text-lg font-black text-gray-900 mb-1">Helder Gomez</h5>
+                        <p class="text-sm text-gray-400">Mr Largui · Golden Shoes</p>
                     </div>
-                    <div class="col-12">
-                        <label class="form-label">Correo electrónico</label>
-                        <input type="email" name="correo" class="form-control">
-                    </div>
-                    <div class="col-12">
-                        <label class="form-label">Tipo de solicitud</label>
-                        <select name="tipo" class="form-select">
-                            <option value="">-- Selecciona --</option>
-                            <option value="peticion">Petición</option>
-                            <option value="queja">Queja</option>
-                            <option value="reclamo">Reclamo</option>
-                            <option value="sugerencia">Sugerencia</option>
-                            <option value="felicitacion">Felicitación</option>
-                        </select>
-                    </div>
-                    <div class="col-12">
-                        <label class="form-label">Mensaje</label>
-                        <textarea name="mensaje" class="form-control" rows="4"></textarea>
-                    </div>
-                    <div class="col-12">
-                        <button type="submit" class="btn btn-golden w-100">
-                            <i class="bi bi-send-fill"></i> Enviar mensaje
-                        </button>
-                    </div>
-                    <div class="col-12">
-                        <div class="form-check">
-                            <input class="form-check-input" type="checkbox" name="terminos" id="terminos">
-                            <label class="form-check-label" for="terminos">Acepto los términos y condiciones</label>
+                </div>
+
+            </div>
+
+            {{-- ════ PQRS ════ --}}
+            <div class="max-w-3xl mx-auto">
+                <p class="text-xs font-bold tracking-widest uppercase text-red-600 mb-2">Atención al cliente</p>
+                <h2 class="text-3xl font-black text-gray-900 mb-8">Formulario PQRS</h2>
+
+                <div class="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
+
+                    @if(session('success'))
+                        <div class="flex items-center gap-3 bg-green-50 border border-green-200 text-green-800 text-sm font-semibold px-5 py-4 rounded-2xl mb-6">
+                            ✅ {{ session('success') }}
                         </div>
-                    </div>
-                </div>
-            </form>
-        </div>
-    </div>
-</div>
+                    @endif
+                    @if($errors->any())
+                        <div class="bg-red-50 border border-red-200 text-red-800 text-sm px-5 py-4 rounded-2xl mb-6">
+                            <p class="font-bold mb-2">⚠️ Corrige los siguientes errores:</p>
+                            <ul class="list-disc list-inside space-y-1">
+                                @foreach($errors->all() as $error)
+                                    <li>{{ $error }}</li>
+                                @endforeach
+                            </ul>
+                        </div>
+                    @endif
 
-@endsection
+                    <form action="{{ route('pqrs.store') }}" method="POST">
+                        @csrf
+                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1">Nombres</label>
+                                <input type="text" name="nombre"
+                                       class="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
+                            </div>
+
+                            <div>
+                                <label class="block text-sm font-bold text-gray-700 mb-1">Apellidos</label>
+                                <input type="text" name="apellido"
+                                       class="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
+                            </div>
+
+                            <div class="sm:col-span-2">
+                                <label class="block text-sm font-bold text-gray-700 mb-1">Correo electrónico</label>
+                                <input type="email" name="correo"
+                                       class="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
+                            </div>
+
+                            <div class="sm:col-span-2">
+                                <label class="block text-sm font-bold text-gray-700 mb-1">Tipo de solicitud</label>
+                                <select name="tipo"
+                                        class="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-red-500">
+                                    <option value="">-- Selecciona --</option>
+                                    <option value="peticion">Petición</option>
+                                    <option value="queja">Queja</option>
+                                    <option value="reclamo">Reclamo</option>
+                                    <option value="sugerencia">Sugerencia</option>
+                                    <option value="felicitacion">Felicitación</option>
+                                </select>
+                            </div>
+
+                            <div class="sm:col-span-2">
+                                <label class="block text-sm font-bold text-gray-700 mb-1">Mensaje</label>
+                                <textarea name="mensaje" rows="4"
+                                          class="w-full border border-gray-200 rounded-xl px-4 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-red-500 resize-none"></textarea>
+                            </div>
+
+                            <div class="sm:col-span-2 flex items-center gap-3">
+                                <input type="checkbox" name="terminos" id="terminos"
+                                       class="w-4 h-4 accent-red-600">
+                                <label for="terminos" class="text-sm text-gray-600">
+                                    Acepto los términos y condiciones
+                                </label>
+                            </div>
+
+                            <div class="sm:col-span-2">
+                                <button type="submit"
+                                        class="w-full text-white font-bold text-sm py-3 rounded-xl" style="background:#b8860b">
+                                    📨 Enviar mensaje
+                                </button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+</x-app-layout>

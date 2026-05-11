@@ -11,49 +11,21 @@ use App\Http\Controllers\ProfileController;
 |--------------------------------------------------------------------------
 */
 
-Route::get('/', [PaginaController::class, 'inicio'])->name('inicio');
-
-Route::get('/menu', [PaginaController::class, 'menu'])->name('menu');
-
-Route::get('/nosotros', [PaginaController::class, 'nosotros'])->name('nosotros');
-
-Route::get('/contacto', [PaginaController::class, 'contacto'])->name('contacto');
-
-Route::post('/pqrs', [PqrsController::class, 'store'])->name('pqrs.store');
-
-Route::get('/deportivos', function () {
-    return view('deportivos');
-})->name('deportivos');
-
-Route::get('/zapatos', function () {
-    return view('zapatos');
-})->name('zapatos');
-
-Route::get('/formales', function () {
-    return view('formales');
-})->name('formales');
-
-Route::get('/accis', function () {
-    return view('accis');
-})->name('accis');
-
-/************************************************************/
-Route::get('/', [PaginaController::class, 'inicio'])->name('inicio');
-
-Route::get('/menu', [PaginaController::class, 'menu'])->name('menu');
-
-Route::get('/nosotros', [PaginaController::class, 'nosotros'])->name('nosotros');
-
-Route::get('/contacto', [PaginaController::class, 'contacto'])->name('contacto');
-
-Route::get('/formales', [PaginaController::class, 'formales'])->name('formales');
-
+Route::get('/',           [PaginaController::class, 'inicio'])->name('inicio');
+Route::get('/menu',       [PaginaController::class, 'menu'])->name('menu');
+Route::get('/nosotros',   [PaginaController::class, 'nosotros'])->name('nosotros');
+Route::get('/contacto',   [PaginaController::class, 'contacto'])->name('contacto');
+Route::get('/formales',   [PaginaController::class, 'formales'])->name('formales');
 Route::get('/deportivos', [PaginaController::class, 'deportivos'])->name('deportivos');
+Route::get('/urbanos',    [PaginaController::class, 'urbanos'])->name('urbanos');
+Route::get('/accis',      [PaginaController::class, 'accis'])->name('accis');
+Route::get('/pqrs',       [PaginaController::class, 'pqrs'])->name('pqrs');
 
-Route::get('/accis', [PaginaController::class, 'accis'])->name('accis');
+Route::post('/pqrs',          [PqrsController::class, 'store'])->name('pqrs.store');
 
-Route::get('/zapatos', [PaginaController::class, 'zapatos'])->name('zapatos');
-/***********************************************************/ 
+// Módulo zapatos
+Route::get('/zapatos',        [PaginaController::class, 'zapatos'])->name('zapatos');
+Route::post('/zapatos/guardar', [PaginaController::class, 'guardarZapato'])->name('zapatos.guardar');
 
 /*
 |--------------------------------------------------------------------------
@@ -73,14 +45,14 @@ Route::get('/dashboard', function () {
 
 Route::middleware('auth')->group(function () {
 
-    Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
-    Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
+    Route::get('/profile',    [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/profile',  [ProfileController::class, 'update'])->name('profile.update');
     Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
 
-    Route::get('/mensajes', [PqrsController::class, 'index'])->name('mensajes');
-    Route::get('/mensajes/{id}/editar', [PqrsController::class, 'edit'])->name('mensajes.edit');
-    Route::put('/mensajes/{id}', [PqrsController::class, 'update'])->name('mensajes.update');
-    Route::delete('/mensajes/{id}', [PqrsController::class, 'destroy'])->name('mensajes.destroy');
+    Route::get('/mensajes',              [PqrsController::class, 'index'])->name('mensajes');
+    Route::get('/mensajes/{id}/editar',  [PqrsController::class, 'edit'])->name('mensajes.edit');
+    Route::put('/mensajes/{id}',         [PqrsController::class, 'update'])->name('mensajes.update');
+    Route::delete('/mensajes/{id}',      [PqrsController::class, 'destroy'])->name('mensajes.destroy');
 
 });
 
