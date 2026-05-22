@@ -280,9 +280,16 @@
                     <a href="{{ route('deportivos') }}" class="gs-btn-primary">
                         Ver Colección &rarr;
                     </a>
-                    <a href="{{ route('zapatos') }}" class="gs-btn-outline">
-                        Gestionar Productos
-                    </a>
+
+                    @auth
+                        <a href="{{ route('zapatos') }}" class="gs-btn-outline">
+                            Gestionar Productos
+                        </a>
+                    @else
+                        <a href="{{ route('login') }}" class="gs-btn-outline">
+                            Accede para gestionar
+                        </a>
+                    @endauth
                 </div>
 
                 <div class="gs-stats">

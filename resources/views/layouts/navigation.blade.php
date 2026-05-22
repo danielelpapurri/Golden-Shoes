@@ -136,10 +136,6 @@
                 Urbanos
             </a>
 
-            <a href="{{ route('zapatos') }}" class="{{ request()->routeIs('zapatos') ? 'active' : '' }}">
-                Productos
-            </a>
-
             <a href="{{ route('contacto') }}" class="{{ request()->routeIs('contacto') ? 'active' : '' }}">
                 Contacto
             </a>
@@ -147,6 +143,20 @@
             <a href="{{ route('nosotros') }}" class="{{ request()->routeIs('nosotros') ? 'active' : '' }}">
                 Nosotros
             </a>
+
+            @auth
+                <a href="{{ route('dashboard') }}" class="{{ request()->routeIs('dashboard') ? 'active' : '' }}">
+                    Dashboard
+                </a>
+
+                <a href="{{ route('mensajes') }}" class="{{ request()->routeIs('mensajes') ? 'active' : '' }}">
+                    Mensajes
+                </a>
+
+                <a href="{{ route('zapatos') }}" class="{{ request()->routeIs('zapatos') ? 'active' : '' }}">
+                    Módulo Zapatos
+                </a>
+            @endauth
         </div>
 
         {{-- Auth --}}

@@ -2,9 +2,16 @@
 
     <section class="bg-white border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-            <p class="text-xs font-bold tracking-widest uppercase text-red-600 mb-2">Inventario</p>
-            <h1 class="text-4xl font-black text-gray-900 mb-2">Módulo de Zapatos</h1>
-            <p class="text-gray-500 text-base">Registra nuevos zapatos al inventario y consulta los registros existentes.</p>
+            <div class="grid gap-8 lg:grid-cols-[1fr_0.9fr] lg:items-center">
+                <div>
+                    <p class="text-xs font-bold tracking-widest uppercase text-red-600 mb-2">Inventario</p>
+                    <h1 class="text-4xl font-black text-gray-900 mb-3">Módulo de Zapatos</h1>
+                    <p class="text-gray-500 text-base">Registra nuevos zapatos al inventario y consulta los registros existentes desde un panel práctico y visual.</p>
+                </div>
+                <div class="rounded-[2rem] overflow-hidden border border-gray-200 shadow-xl">
+                    <img src="{{ asset('fotos/deportivos.png') }}" alt="Inventario de Zapatos" class="h-full w-full object-cover min-h-[280px]" />
+                </div>
+            </div>
         </div>
     </section>
 

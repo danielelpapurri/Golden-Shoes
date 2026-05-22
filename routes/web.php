@@ -53,6 +53,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/mensajes/{id}/editar',  [PqrsController::class, 'edit'])->name('mensajes.edit');
     Route::put('/mensajes/{id}',         [PqrsController::class, 'update'])->name('mensajes.update');
     Route::delete('/mensajes/{id}',      [PqrsController::class, 'destroy'])->name('mensajes.destroy');
+    Route::get('/zapatos',        [PaginaController::class, 'zapatos'])->name('zapatos');
+Route::post('/zapatos/guardar', [PaginaController::class, 'guardarZapato'])->name('zapatos.guardar');
 
 });
 
